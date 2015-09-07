@@ -1,0 +1,13 @@
+1. By Amdalh's law : Speedup = 1 / (0.1 + 0.9/p)
+	(where p is the number of cores)
+
+	So, the speedup (p==128) is around 9.34, and the effiency is speedup/p, so 0.073.
+
+2. Throughput = tasks/time = tasks/ (tasks * alpha) = 1/alpha
+
+3. When it is run once, and never run afterward.
+
+4. I am not sure.
+
+5. My laptop has four cores.
+
