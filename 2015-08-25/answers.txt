@@ -1,0 +1,20 @@
+1. What is a simple model that would predict this time?
+
+Let us assume time as follows.
+ S = Start up overhead
+ C = Time to count one student
+ N = Number of students
+ R = Number of rows
+ G = Time for the instructor to gather counts
+ A = Time for instructor to do the arithmetic
+
+Time = S + C * (N/R) + G * (N/R) + A
+
+2. What about a simple model to predict time for one person to count?
+
+Time = C * N
+
+3. How big should the class be before the parallel method takes less time?
+
+I am not sure
+
