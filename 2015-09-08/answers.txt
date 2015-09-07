@@ -1,0 +1,4 @@
+1. What is 16N?
+
+2. #flops = N * N
+	AI = N^2 / ?
