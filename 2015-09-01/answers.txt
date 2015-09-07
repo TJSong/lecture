@@ -1,0 +1,13 @@
+3. Speedup = 1/p , when time goes infinitely
+
+4. Due to dependencies,
+	@1hr	:	GCC done.
+	@1.25hr	:	OpenBLAS done.
+	@1.5hr	:	OpenMPI done.
+	@1.75hr	: 	LAPACK done.
+	@2.25hr :	applicatino done.
+
+5. I am not sure.
+
+6. 7. I couldn't make the file...
+
