@@ -1,4 +1,10 @@
-1. What is 16N?
 
-2. #flops = N * N
-	AI = N^2 / ?
+
+1. AI = #flops / #bytes transferred between memory and cache = 2/(1+1) = 1
+
+2. AI = 2, we can use A again, but not B.
+
+3. AI = 2N^3 / N^2 = 2N 
+
+4. L1 : 32KB, L2 : 256KB, L3 : 6MB
+
