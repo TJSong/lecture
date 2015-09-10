@@ -1,0 +1,9 @@
+1. I am not sure... 
+
+2. Hyperthreading issues multiple instructions at the same time on a single core. Two cores issue one instruction each at a time.  
+
+3. http://www.extremetech.com/wp-content/uploads/2012/07/Intel-Mic.jpg
+
+I guess the memory access is non-uniform (NUMA). It seems all processors can access any address.
+
+4. Hope to get it after the lecture.
