@@ -1,4 +1,11 @@
-1. I am not sure... 
+1. See below.
+
+GFlops/s 
+	|   _______________
+	|  /
+	| /
+	|/
+	|_____________________AI
 
 2. Hyperthreading issues multiple instructions at the same time on a single core. Two cores issue one instruction each at a time.  
 
@@ -7,3 +14,51 @@
 I guess the memory access is non-uniform (NUMA). It seems all processors can access any address.
 
 4. Hope to get it after the lecture.
+
+
+* for i : n
+	result += a_i * b_i
+
+	data accessed = 2n doubles
+	operations done = 2n adds&multiples
+
+	AI = flops/slow mem =2n / 2n = 1 flop/double = 1/8 flop/byte
+
+	59 GB/s bandwidth = B
+	Peak flop rate for dot?
+	B = 59 GB/s = 59/8 = 7.5 billion doubles/s
+	Peak flop rate = AI * B = 7.5 Gflop/s
+
+* Shared memory vs message passing 
+* Shared memory HW	-- NUMA
+					-- uniform
+* Dist memory
+
+* Result = dot(a(1:m), b(1:m)) + dot(a(m:2m), b(m:2m))
+* Costs
+	Memory communication costs
+	Computation costs
+	Inter-processor costs
+
+* alpha-beta model: 
+time to communicate k bytes 
+	= alpha + betha * k
+	= latency + BW
+
+* Costs for dot product factors:
+	total mem BW
+	Flop rate @ peak
+	cost to communicate
+
+* Organizaing dot :
+	|-- Shared memory 	
+	|		|-- explicit locks
+	|		|-- barrier synchronization
+	|-- Message passing
+
+* partial_sum[2]
+psum[p] = dot_product stuff on proc p
+(done only by proc p)
+----> barrier
+total = psum[0] + psum[1]
+
