@@ -1,0 +1,32 @@
+0. 20150916 20:01PM Doing it now?
+
+1. Lumped parameter simluatinos
+
+2. 
+      typedef struct csr_t {
+          int  n;   /* Dimension of matrix (assume square) */
+          int* pr;  /* Array of matrix nonzeros (row major order) */
+          int* col; /* Column indices of nonzeros *
+          int* ptr; /* Offsets of the start of each row in pr
+                       (ptr[n] = number of nonzeros) */
+      } csr_t;
+    
+      void sparse_multiply(csr_t* A, double* x, double* result)
+      {
+          memset(result, 0, A->n * sizeof(double));
+          /* Fill in here */
+		  int s=0;
+          for (i=0 ; i<A.n ; i++){
+             //need to fill in... 
+              result[i] += s;  
+          }
+      } 
+
+3.
+      double laplacian_u(double (*u)(double x, double y),
+                         double h, double x, double y)
+      {
+          /* Estimate the Laplacian applied to u at (x,y) */
+      }
+
+4.
