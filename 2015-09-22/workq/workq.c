@@ -26,6 +26,10 @@
  */
 pthread_mutex_t io_lock;
 
+/*
+ * Lock on queue
+ */
+pthread_mutex_t q_lock;
 
 /*
  * Protected printf
@@ -200,9 +204,14 @@ void producer_main(workq_t* workq, int nitems)
     for (i = 0; i < nitems; ++i) {
         char buf[256];
         sprintf(buf, "Work item %d", i);
+		
+    	pthread_mutex_lock(&q_lock);
         workq_put(workq, strdup(buf));
+    	pthread_mutex_unlock(&q_lock);
     }
+    pthread_mutex_lock(&q_lock);
     workq_finish(workq);
+    pthread_mutex_unlock(&q_lock);
 }
 
 
@@ -222,12 +231,14 @@ void* consumer_main(void* arg)
 {
     consumer_t* consumer = (consumer_t*) arg;
     workq_t* workq = consumer->workq;
+    pthread_mutex_lock(&q_lock);
     for (char* t = (char*) workq_get(workq);
          t != NULL;
          t = (char*) workq_get(workq)) {
         lprintf("Process %d: %s\n", consumer->id, t);
         free(t);
     }
+    pthread_mutex_unlock(&q_lock);
     return NULL;
 }
 
@@ -249,6 +260,7 @@ int main(int argc, char** argv)
 
     /* Initialize I/O mutex and work queue */
     pthread_mutex_init(&io_lock, NULL);
+    pthread_mutex_init(&q_lock, NULL);
     workq_init(&workq);
     
     /* Launch worker threads */
@@ -271,6 +283,7 @@ int main(int argc, char** argv)
     /* Free I/O mutex and work queue */
     workq_destroy(&workq);
     pthread_mutex_destroy(&io_lock);
+    pthread_mutex_destroy(&q_lock);
 
     return 0;
 }
