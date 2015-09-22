@@ -2,6 +2,18 @@
 
 1. I am not sure about far-field force.
 
+4. 
+	- Compiler flags
+	- Vectorization
+	- Memory alignment
+	- 
+* In the class:
+	gcc slower 10x than icc
+
+* 
+
+
+
 * Result looks like below. 
 
 ./basic -v -n 10 -g 15 -f glider.txt
