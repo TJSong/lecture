@@ -2,7 +2,13 @@
 
 1. Difference between Mutext and Conditional variables
 
-2. a)
+2. a) A = Time in critical section : N/B * t_update
+      B = Time in Batch : N/P * t_trial
+	  T = A + B
+
+   b) N=1000000000, B1=10000, B2=20000, B3=5000
+
+   c) We can sweep the t_trial. 
 
 3. We can put lock and unlock function to wherever TOD function exists. I
 modified the source code.
