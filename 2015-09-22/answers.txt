@@ -1,0 +1,11 @@
+0. The day before lecture, 1hr
+
+1. Difference between Mutext and Conditional variables
+
+2. a)
+
+3. We can put lock and unlock function to wherever TOD function exists. I
+modified the source code.
+
+
+
