@@ -1,0 +1,20 @@
+0. Two days before the lecture, 30mins
+
+1. 
+
+2. a) A = Time in critical section : N/B * t_update
+      B = Time in Batch : N/P * t_trial
+	  T = A + B
+
+   b) N=1000000000, B1=10000, B2=20000, B3=5000
+
+ts693@en-cs-totient-01:~/demo/threaded_mc$ cat pthread_mc.o4708
+24 threads (pthreads): 0.500259 (0.000259284): 1.143000e-03 s, 1240000 trials
+24 threads (pthreads): 0.500066 (0.000237298): 1.659000e-03 s, 1480000 trials
+24 threads (pthreads): 0.500268 (0.000272791): 1.459000e-03 s, 1120000 trials
+
+   c) We can sweep the t_trial. 
+
+
+
+
