@@ -6,6 +6,7 @@ GFlops/s
 	| /
 	|/
 	|_____________________AI
+=======
 
 2. Hyperthreading issues multiple instructions at the same time on a single core. Two cores issue one instruction each at a time.  
 
