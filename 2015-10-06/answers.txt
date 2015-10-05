@@ -1,0 +1,22 @@
+0. The day before the lecture, 0.5hr
+
+1. Never heard about MPI before..
+
+2. a) # which mpicc
+      # /usr/local/intel/impi/5.0.3.048/intel64/bin/mpicc 
+	  
+      # qsub ping-2chip.pbs
+      # qsub ping-2core.pbs
+
+	  It's been queued for very long time?
+
+   b) # module load openmpi/1.10.0-icc-15.0.3
+      # which mpicc
+      # /usr/local/intel/impi/5.0.3.048/intel64/bin/mpicc 
+	  
+      # qsub ping-2chip.pbs
+      # qsub ping-2core.pbs
+
+	  It's been queued for very long time?
+
+   c) I am not sure..
