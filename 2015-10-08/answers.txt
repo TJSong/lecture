@@ -1,0 +1,12 @@
+0. This time, I am bit late. 10/16, 30 mins
+
+1. In the slide, Fat tree seems unclear
+
+2. I am pretty much enjoying the lecture, but sometimes it is a bit hard to
+understand physics and math without background. 
+
+3. a) Interact with another procesor, data sent from one to another core, and
+data recieve from one to another at the same time.
+
+b) We can do computation and communication at the same time. Hide the latency.
+
